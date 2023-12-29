@@ -1,0 +1,77 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 30px;
+    user-select: none;
+}
+
+.login {
+    width: 80%;
+    max-width: 20%;
+    text-align: center;
+}
+
+.form-contro {
+    width: 100%;
+    color: aliceblue;
+    background: linear-gradient(25deg, transparent, rgb(49, 58, 51), transparent);
+    padding: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    font-size: 1.2rem;
+    height: 25px;
+}
+
+.button_ingresar {
+    background-color: #02734A;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
+    color: #dbdddc;
+    font-size: 1.2rem;
+}
+
+.button_ingresar:hover {
+    color: #8fefbf;
+}
+
+.spinner {
+    margin: 0 auto;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+/*========MEDIA QUERIES (SMALL DEVICES)========*/
+@media screen and (max-width: 1024px) {  
+    .body {
+        padding-top: 25%;
+    }
+    .logo {
+        width: 230px;
+       }
+    .login {
+        max-width: 60%;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .form-contro {
+        width: 100%;
+        font-size: 1rem;
+        height: 10px;
+        padding: 0.8rem;
+        background: linear-gradient(25deg, transparent, #194c26, transparent);
+    }
+    .button_ingresar {
+        width: 100%;
+        margin-top: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}

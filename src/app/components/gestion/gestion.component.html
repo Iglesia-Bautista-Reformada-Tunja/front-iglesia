@@ -1,0 +1,33 @@
+
+<section class="contacto">
+  <div class="formulario">
+    <h2>Cargar Fotografía</h2>
+    <form [formGroup]="form" (submit)="createFile()">
+
+      <div class="grupo-formulario">
+        <label class="title_campos" for="nombre">Nombre su Imagen</label>
+        <input style="border:1px solid" class="label_title" formControlName="name_foto" type="text" placeholder="Editar Historia">
+      </div>
+
+      <div class="grupo-formulario">
+        <label class="title_campos" for="correo">Selecione su fotografía</label>
+        <input class="campo-escritura" formControlName="images" (change)="onChangeInput($event)" type="file" placeholder="Ingresa imagen de portada" required>
+      </div>
+
+      <div class="botones">
+        <input type="submit" value="Cargar historia" class="boton-enviar">
+      </div><br> <br>
+
+      <div class="botones">
+        <a href="/eliminar-historia" class="boton_eliminar"><strong>Eliminar historia</strong></a>
+      </div> <br> <br>
+
+      <div class="botones">
+        <a href="/nosotros" class="ver-articulo-creado"><strong>Ver historia creada</strong></a>
+      </div>
+    </form>
+  </div>
+</section>
+  
+  
+

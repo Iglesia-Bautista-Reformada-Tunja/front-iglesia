@@ -1,0 +1,406 @@
+/*CSS RAIZ PARA EFECTOS ANTES DESVANECER*/
+body, .presentacion-container, .servicios, .liderazgo {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  animation: backgroundAnimation 30s infinite linear;
+}
+
+@keyframes backgroundAnimation {
+  0%, 15% {
+    background: #f9f9f9;
+    opacity: 1;
+  }
+  30% {
+    background: #d7dddf; 
+    opacity: 1;
+  }
+  45% {
+    background: #e2e0e0; 
+    opacity: 1;
+  }
+  60% {
+    background: #d2d4cd;
+    opacity: 1;
+  }
+  75%, 100% {
+    background: #dfe1e1;
+    opacity: 1;
+  }
+}
+
+
+
+.carousel-inner {
+    height: 600px;
+  }
+
+  .carousel-item img {
+    height: 800px;
+    object-fit: cover;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  /* pantalla grande */
+@media  screen and (min-width: 1024px) {
+    .carousel-item img {
+      height: 800px;
+    }
+  }
+  
+@media screen and (max-width: 1024px) {
+  .carousel-inner {
+    height: 450px;
+  }
+  .carousel-item img {
+    height: 450px;
+  }
+  .carousel-container {
+    max-width: 100%;
+    padding-top: 10px;
+  }
+  .carousel-caption h3 {
+      font-size: 5vw;
+  }  
+  .carousel-caption p {
+    font-size: 3vw;
+  }
+}
+/*FINALIZA CAROUSEL */
+
+  .presentacion {
+    margin-top: 40px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .presentacion-parrafo {
+    font-size: 1.8rem;
+    font-family: "Nombre de la fuente";
+  }
+  .cita-biblica {
+    font-size: 1.8rem;
+    margin-bottom: 2.0rem;
+    color: black;
+    width: 100%;
+  }
+  
+  .presentacion-titulo {
+    font-size: 6.0rem;
+    font-family: "Nombre de la fuente";
+    line-height: 0.8;
+  }
+
+  @media screen and (max-width: 1024px){
+    .presentacion {
+      margin-top: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .presentacion-container {
+      width: 100%;
+      margin-bottom: 2.8rem;   
+
+    }
+    .presentacion-parrafo {
+      font-size: 1.3rem;
+      font-family: "Nombre de la fuente";
+    }
+    .presentacion-titulo {
+      font-size: 3.0rem;
+      font-family: "Nombre de la fuente";
+      line-height: 0.8;
+    }
+    .cita-biblica {
+      font-size: 1.3rem;
+    }
+}
+
+/* ACERCA DE HORARIOS UBICACION */
+.servicios-content {
+  width: 100%;
+  margin-top: -35px;
+
+}
+
+.titulo-horario {
+  margin-top: 25px;
+}
+
+.titulo-horario h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.servicios .horario {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #df0f00;
+  font-weight: 600;
+  margin-bottom: 2.0rem;
+}
+
+iframe {
+  margin-bottom: 2.0rem;
+}
+
+.about__content .titulo-mision {
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .titulo-horario h1 {
+    font-size: 1.6rem;
+  }
+  .about__content .titulo-mision {
+    font-size: 1.3rem;
+    color: black;
+  }
+  .servicios .horario {
+    font-size: 1.5rem;
+  }
+  iframe {
+    width: 90%;
+    height: 250px;
+  }
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.about__content .parra-mision {
+  margin: 2rem 0 2.6rem;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.btn-primary {
+  background: rgb(10, 83, 8);
+  color: rgb(0, 0, 0);
+  border: 1px solid #093008;
+  margin-bottom: 30px;
+}
+
+.btn:hover {
+  background: rgb(221, 239, 99);
+  color: #000000;
+  border-color: transparent;
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid #03251b;
+  transition: var(--transition);
+
+}
+
+.unselectable {
+  user-select: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .about__content {
+      text-align: center;
+  }
+  .about__content .parra-mision {
+    font-size: 1.1rem;
+    color: black;
+  }
+}
+
+
+/*NUESTO PASTOR*/
+.modal-pastor {
+  color: #184ccf;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.titulo__liderazgo {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.descrip-parrafo {
+  color: black;
+  font-size: 1.3rem;
+}
+
+.about__content .img-pastor {
+  width: 40%;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0;
+}
+  .titulo__liderazgo {
+    font-size: 1.8rem;
+  }
+  .liderazgo .link-pastor {
+    font-size: 1.0rem;
+  }
+  .descripcion__pastor {
+    width: 90%;
+    font-size: 1.0rem;
+    line-height: 1.4;
+  }
+  .about__content .img-pastor {
+    width: 65%;
+    margin-left: 12%;
+    margin-top: 25px;
+  }
+
+  .descrip-parrafo {
+    font-size: 1.1rem;
+    color: black;
+  }
+}
+
+  /*FOOTER*/
+
+.rodapePrincipal {
+	background-color: rgb(234, 228, 195);
+  background-size: cover;
+  background-position: center;
+}
+
+.rodapePrincipal-navMap-list {
+	display: flex;
+	flex-flow: column wrap;
+	height: 30vh;
+}
+
+.rodapePrincipal-navMap-link {
+	text-decoration: none;
+	color: #FFF;
+	margin-top: 10px;
+}
+
+.navmap-list-title {
+	font-weight: 700;
+	font-size: 1.3em;
+	margin: .9em 0;
+	padding-left: .3em;
+	padding-top: .2em;
+	padding-bottom: .2em;
+}
+
+.navmap-list-title + .rodapePrincipal-navMap-link {
+	margin-top: 0;
+}
+
+.navmap-list-title-bancoDeDados { color: #f60808; border-left: 4px solid #f60808; }
+.navmap-list-title-framework { color: #AD85BF; border-left: 4px solid #AD85BF; }
+.navmap-list-title-frontend { color: #5EC6F3; border-left: 4px solid #5EC6F3; }
+.direccion { color: #25D285; border-left: 4px solid #25D285; }
+
+.subtitulo {
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  filter: brightness(90%);
+
+}
+
+.addres {
+    color: #25D285;
+    font-size: 1.6rem;
+}
+
+.barrio {
+    color: #AD85BF;
+    font-size: 1.6rem;
+}
+
+.telefono {
+    color: #5EC6F3;
+    font-size: 1.6rem;
+}
+
+.dia-adoracion {
+    font-size: 1.4rem;
+    color: #f60808;
+}
+
+.hora-adoracion {
+    font-size: 1.2rem;
+    color: #f60808;
+}
+
+
+/* Responsive */
+@media(max-width: 768px) {
+	.rodapePrincipal-navMap-list {
+		height: auto;
+	}
+    .horario-servicios {
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .rodapePrincipal-navMap-list {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+
+/*mini*/
+.negro{
+    background: #00152d;
+    height: 65px;
+}
+
+.centralist{
+    text-align: center;
+}
+
+.title{
+    color: white;
+    text-decoration: none;
+}

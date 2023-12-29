@@ -1,0 +1,39 @@
+.contenido-img {
+    text-align: center;
+}
+
+.img-modal {
+    height: 30%;
+    width: 20%;
+}
+
+.titulo-h1 h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: red;
+}
+
+.article {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.modal-content {
+    max-height: 70vh; 
+    overflow-y: auto;
+  }
+
+@media screen and (max-width: 1024px) {
+    .titulo-h1 h1 {
+        font-size: 1.1rem;
+        color: rgb(0, 42, 255);
+    }
+    .article {
+        font-size: 0.8rem; 
+    }
+    .img-modal {
+        height: 60%;
+        width: 40%;
+    }
+}

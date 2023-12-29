@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="text-center">
+        <div class="card-body">
+            <h2 class="titulo-articulos-recomendados">Elije un articulo para eliminar</h2>
+            <hr>
+        </div>
+    </div>
+    
+<div class="d-flex flex-wrap justify-content-evenly mt-5">
+  <div class="col-md-6" *ngFor="let libro of libros">
+    <div class="card mb-3" style="border: none;">
+      <div class="row g-0 ">
+
+        <div class="col-md-5 d-flex align-items-center">
+          <img *ngFor="let images of libro.bookRutas" [src]="images" class="img-fluid imagen align-self-center ms-2">
+        </div>
+
+        <div class="col-md-8" >
+          <div class="card-body">
+            <h2 class="title-nameBook">{{ libro.nameBook }}</h2>
+            <div *ngIf="!libro.mostrarCompleto">
+              <p class="parrafo-article">{{ libro.article.substring(0, 100) }}...</p>
+              <button (click)="mostrarArticuloCompleto(libro)" type="button" class="btn btn-light">Leer más</button>
+
+            </div><br>
+            <div>
+              <button class="btn btn-danger" (click)="deleteArticulo(libro)">Eliminar</button>
+
+            </div>
+
+            
+
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>

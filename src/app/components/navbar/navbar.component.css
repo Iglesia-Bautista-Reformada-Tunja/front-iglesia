@@ -1,0 +1,154 @@
+/*CSS GENERAL*/
+
+.flexSB {
+  display: flex;
+}
+
+header {
+  height: 10.5vh;
+  background-color: #02734A;
+  top: 0;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  margin-left: 2%;
+}
+
+li a.active, li a:hover{
+  background: rgb(25, 50, 27);
+  color: #21f12b;
+  transition: 0.3s;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+
+.logo img {
+  width: 260px;
+  margin-top: 5px;
+}
+
+nav ul {
+  display: flex;
+  margin-top: 35px;
+  margin-left: 10%;
+  list-style-type: none;
+}
+
+header ul li {
+  margin-top: 0;
+  margin-right: 10px;
+  white-space: nowrap; 
+}
+
+/* REVISAR*/
+li .ul-second {
+  position: absolute;
+  display: none;
+}
+
+header a {
+  color: #fcfcfc;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 2px 7px;
+  font-weight: 500;
+  transition: none;
+}
+
+header i {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin: 0 10px;
+}
+
+header button {
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.toggle {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .toggle {
+    display: none;
+  }
+
+  .navMenu-list {
+    display: flex !important;
+    position: static !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header nav .flexSB {
+    display: none;
+  }
+  .account {
+    display: none;
+  }
+  .navMenu-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #02734A;
+    width: 50%;
+    height: 100vh;
+    z-index: 999;
+  }
+  header ul li {
+    align-items: left;
+    margin-top: 30px;
+    padding: 0 50px;
+  }
+  .toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+    cursor: pointer;
+    background: none;
+    height: 70%;
+    color: rgb(251, 251, 251);
+    border: none;
+  }
+  nav ul {
+    margin-left: 0px;
+  
+  }
+  header a {
+    margin-left: 2px;
+    font-size: 1.1rem;
+  }
+  .navMenu-list.active {
+    margin-top: 87px;
+  }
+  .logo img {
+    width: 250px;
+    margin-left: -30%;
+  }
+  .logo {
+  margin-left: 20%;
+
+  }
+}

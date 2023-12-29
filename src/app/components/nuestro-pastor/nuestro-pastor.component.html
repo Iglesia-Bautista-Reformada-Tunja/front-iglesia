@@ -1,0 +1,83 @@
+<br>
+<body class="">
+    <div class="container">
+        <div class="col-lg-9 my-4">
+            <nav>
+              <nav class="navbar navbar-expand-lg navbar-light nav-2" style="height: 8%;">
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 point">
+                    <li class="nav-item">
+                      <a class="nav-link colors" routerLink="/nuestroPastor" routerLinkActive="active"><strong>NUESTRO PASTOR</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link colors" routerLink="/fundamentos" routerLinkActive="active"><strong>LIBROS RECOMENDADOS</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link colors" routerLink="/horario" routerLinkActive="active"><strong>HORARIOS DE SERVICIO</strong></a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </nav>
+        </div>
+    </div>
+    <section>
+    <div class="body">     
+        <h2 class="title">BIOGRAFIA DE NUESTRO PASTOR</h2>
+            <hr>
+        <div *ngIf = "files.length>0">
+            <div *ngFor = "let file of files">
+                <div class="centar-text">
+                    <p>{{ file.name_foto }}</p>
+                </div>
+                <div class="centrar">
+                    <img class="img-paths" *ngFor="let images of file.imageRutas" [src]="images">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+    <footer class="colorun">
+        <div  class="banner-wrapper">
+        <div class="icon-text">
+            <div class="icon-text-icon">
+                <H2 class="sobren nav-link">SOBRE NOSOTROS</H2>
+            </div> 
+            <div class="large-4 columns">
+                <ul class="cro_footwidget">
+                    <li id="text-2" class="widget-container widget_text clear">
+                        <div class="cro-sidebar-inner">
+                            <div class="textwidget colores adress">
+                            <br>
+                    <p>
+                        Tunja - Boyacá
+                    </p>
+                    <p>
+                        Dirección: Carrera 7b #51 - 20. Las Granjas
+                    </p>
+                    <p>
+                        Teléfono: 311 2089172
+                    </p>
+                        <h2>SÍGUENOS</h2>                  
+                            <p href="#skills">
+                                <a href="http://facebook.com/JesusAutorDeVida"  target="_blank" class="tamañoface">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </p>
+                    </div>
+                </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <footer class="negro">
+        <div class="large-6 columns">
+            <br>
+            <div id="site-cnt" class="centralist">
+                <a class="title"> Iglesia Bautista Reformada De Tunja © (2022) </a>
+            </div>
+        </div>
+    </footer>

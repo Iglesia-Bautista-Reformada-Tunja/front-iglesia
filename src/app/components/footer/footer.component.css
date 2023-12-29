@@ -1,0 +1,129 @@
+.logo-footer {
+    width: 450px;
+}
+
+footer{
+    text-align: center;
+    padding: 40px; 
+ }
+ 
+ .copyright{
+     color: #ffffff;
+     font-size: 18px;
+     margin: 20px;
+ }
+
+.barberia{
+    width: 100%;
+}
+  
+  /*FOOTER*/
+
+.pie_pagina {
+    position: relative;
+}
+
+.rodapePrincipal {
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(70%);
+    background-position: center center;
+}
+
+.rodapePrincipal-navMap-list {
+	display: flex;
+	flex-flow: column wrap;
+	height: 50vh;
+}
+
+.navmap-list-title {
+	font-weight: 500;
+	font-size: 1.5em;
+	margin: .9em 0;
+	padding-left: .3em;
+	padding-top: .1em;
+	padding-bottom: .1em;
+}
+
+.navmap-list-title + .rodapePrincipal-navMap-link {
+	margin-top: 0;
+}
+
+.objeto { color: #dfdfdf; border-left: 2px solid #25D285; }
+
+.propiedad {
+    color: #25D285;
+    font-size: 1.3rem;
+}
+.propieda {
+    color: #25D285;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {  
+    .propiedad {
+        font-size: 0.8rem;
+    }
+    .objeto {
+        font-size: 1em;
+    }
+    .rodapePrincipal-navMap-list {
+        height: 40vh;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navmap-list-title {
+        margin: 1em 0;
+        padding-left: .3em;
+        padding-top: .1em;
+        padding-bottom: 1.1em;
+    }
+    .logo-footer {
+        width: 280px;
+    }
+    
+    
+     
+     .copyright{
+         font-size: 12px;
+         margin: 20px;
+     }
+}
+
+/*footer mini*/
+.negro{
+    background: #00152d;
+    height: 65px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.centralist{
+    text-align: center;
+    align-items: center;
+}
+
+.title{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) { 
+    .negro{
+        background: #00152d;
+        height: 30px;
+        font-size: 12px;
+        align-items: center;
+    } 
+}
