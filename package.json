@@ -2,8 +2,9 @@
   "name": "pagina-iglesia",
   "version": "0.0.0",
   "scripts": {
-    "start:prod": "node index.js",
-    "start": "npm run build && npm run start:prod",
+    "ng": "ng",
+    "start:prod":"npm run build && node index.js",
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
