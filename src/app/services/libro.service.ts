@@ -10,7 +10,8 @@ import { Libros } from '../models/libros';
 })
 export class LibroService {
 
-  readonly url = "http://localhost:2500/api/libros/";
+readonly url = "https://back-iglesia-3c289a779c5b.herokuapp.com/libros"
+//  readonly url = "http://localhost:2500/api/libros/";
   imagenes: Libros[] = [];
   libros$ = new Subject<Libros[]>();
   httpClient: any;
@@ -19,22 +20,20 @@ export class LibroService {
   }
 
   getAllLibros(){
-    return this.httpClient.get("http://localhost:2500/api/libros/")
+    return this.httpClient.get("https://back-iglesia-3c289a779c5b.herokuapp.com/libros")
+    //return this.httpClient.get("http://localhost:2500/api/libros/")
   }
-/*
-  deleteArticulo(libro: any) {
-    return this.httpClient.delete("http://localhost:2500/api/libros/")
+
+  paginationLibros(){
+    return this.http.get("https://back-iglesia-3c289a779c5b.herokuapp.com/pagination")
+    //return this.http.get("http://localhost:2500/api/pagination")
   }
-*/
+  //https://back-iglesia-3c289a779c5b.herokuapp.com
 
-paginationLibros(){
-  return this.http.get("http://localhost:2500/api/pagination")
-}
-
-deleteArticulo(nameBook: string) {
-  const deleteUrl = `${this.url}nameBook/${nameBook}`;
-  return this.http.delete(deleteUrl);
-}
+  deleteArticulo(nameBook: string) {
+    const deleteUrl = `${this.url}nameBook/${nameBook}`;
+    return this.http.delete(deleteUrl);
+  }
   
   //Solicitud que trae los libros y los pasa a fundamentos
   getLibro(){
@@ -48,7 +47,7 @@ deleteArticulo(nameBook: string) {
     return this.libros$.asObservable();
   }
 
-//metodo para crear libro en gestionUno
+  //metodo para crear libro en gestionUno
   postLibro(nameBook: string, article:string, images: FileList){     //metodo para grabar en postman y envbia al backend
     const libro = new FormData();     //objeto que nos enlista los artibutos a la base datos
     libro.append("nameBook", nameBook);      //metodo ´para adjuntar archivos append
@@ -70,34 +69,4 @@ deleteArticulo(nameBook: string) {
       this.libros$.next(this.imagenes);    //actualiza la vista 
     })
   }
-
 }
-
-
-  /*
-  pagination(){
-    return this.http.get("http://localhost:2500/api/libros/")
-  }
-  */
-
-/*
-  getLibrosStream(){
-    return this.libros$.asObservable()
-  }
-*/
-
-
-/*
-  getAllLibros(){
-    return this.httpClient.get("http://localhost:2500/api/libros/")
-  }
-  */
-
-/*
-//opcion 2
-pagination(page: number, pageSize: number): Observable<Libros[]> {
-  const startIndex = (page - 1) * pageSize;
-  const url = `${this.url}?_start=${startIndex}&_limit=${pageSize}`;
-  return this.http.get<Libros[]>(url); // Indicamos el tipo esperado en el get<>
-}
-*/
