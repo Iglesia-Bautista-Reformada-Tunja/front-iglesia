@@ -10,8 +10,8 @@ import { Files } from '../models/files';
 export class FileService {
   //https://back-iglesia-3c289a779c5b.herokuapp.com
 
-  readonly url = "https://back-iglesia-3c289a779c5b.herokuapp.com/";
-  //readonly url = "http://localhost:2500/api/images/";
+  //readonly url = "https://back-iglesia-3c289a779c5b.herokuapp.com/";
+  readonly url = "http://localhost:2500/api/images/";
   imagenes: Files[] = [];
   files$ = new Subject<Files[]>();
 
