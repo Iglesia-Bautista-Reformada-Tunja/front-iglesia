@@ -1,7 +1,7 @@
-<section class="sec_princi">
+<section class="contacto">
   <div class="formulario">
     <h2>Cargar Artículo</h2>
-    <form class="img" [formGroup]="pdf" (submit)="createLibro()">
+    <form [formGroup]="pdf" (submit)="createLibro()">
       
       <div class="grupo-formulario">
         <label class="title_campos" for="nombre">Titulo de Artículo</label>
@@ -19,18 +19,18 @@
       </div>
 
       <div class="botones">
-        <input type="submit" value="Cargar artículo" class="boton-cargar-articulo">
+        <input type="submit" value="Cargar artículo" class="boton-enviar">
       </div><br> <br>
 
       <div class="botones">
-        <a href="/eliminar-art" class="boton_eliminar"><strong>Eliminar artículo</strong></a>
+        <a routerLink="/eliminar-art" class="boton_eliminar"><strong>Eliminar artículo</strong></a>
       </div> <br> <br>
 
       <div class="botones">
-        <a href="/fundamentos" class="ver-articulo-creado"><strong>Ver artículo creado</strong></a>
+        <a routerLink="/fundamentos" class="ver-articulo-creado"><strong>Ver artículo creado</strong></a>
       </div>  <br> <br>
       <div class="botones">
-        <a href="/gestion" class="boton_crear_img"><strong>Ruta crear imagen</strong></a>
+        <a routerLink="/gestion" class="boton-enviar"><strong>Ruta crear imagen</strong></a>
       </div>
     </form>
   </div>

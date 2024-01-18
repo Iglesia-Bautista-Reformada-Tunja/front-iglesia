@@ -2,3 +2,135 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/*Carrousel*/
+.carousel-inner {
+    height: 600px;
+  }
+  .carousel-item img {
+    height: 800px;
+    object-fit: cover;
+  }
+  .carousel-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+  /*pantalla grande*/
+  @media  screen and (min-width: 1024px) {
+    .carousel-item img {
+      height: 800px;
+    }
+  }
+    
+  @media screen and (max-width: 1024px) {
+    .carousel-inner {
+      height: 450px;
+    }
+    .carousel-item img {
+      height: 450px;
+    }
+    .carousel-container {
+      max-width: 100%;
+      padding-top: 10px;
+    }
+    .carousel-caption h3 {
+        font-size: 5vw;
+    }  
+    .carousel-caption p {
+      font-size: 3vw;
+    }
+  }
+  /* Section servicios*/
+  .servicios-content {
+    width: 100%;
+    margin-top: -35px;
+  
+  }
+  .titulo-horario {
+    margin-top: 25px;
+  }
+  .titulo-horario h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .servicios .horario {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #df0f00;
+    font-weight: 600;
+    margin-bottom: 2.0rem;
+  }
+  .container {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .about__container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+  }
+  iframe {
+    margin-bottom: 2.0rem;
+  }
+  .about__content .titulo-mision {
+    font-size: 2.0rem;
+    text-align: center;
+  }
+  .about__content .parra-mision {
+    margin: 2rem 0 2.6rem;
+    color: black;
+    font-size: 1.3rem;
+  }
+  .btn-primary {
+    background: rgb(10, 83, 8);
+    color: rgb(0, 0, 0);
+    border: 1px solid #093008;
+    margin-bottom: 30px;
+  }
+  .btn:hover {
+    background: rgb(221, 239, 99);
+    color: #000000;
+    border-color: transparent;
+  }
+  .btn {
+    width: max-content;
+    display: inline-block;
+    color: white;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid #03251b;
+    transition: var(--transition);
+  }
+  @media screen and (max-width: 1024px) {
+    .titulo-horario h1 {
+      font-size: 1.6rem;
+    }
+    .about__content .titulo-mision {
+      font-size: 1.6rem;
+      color: black;
+    }
+    .servicios .horario {
+      font-size: 1.5rem;
+  
+    }
+    iframe {
+      width: 90%;
+      height: 250px;
+    }
+    .about__content .parra-mision {
+      font-size: 1.1rem;
+    }
+  }

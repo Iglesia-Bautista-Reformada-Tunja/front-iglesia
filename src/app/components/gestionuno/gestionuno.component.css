@@ -5,69 +5,59 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 /*formulario nuevo*/
-.sec_princi {
+.contacto {
 background-color: #ffffff;
-  padding: 50px 0;
-  padding-top: 10%;
+padding: 50px 0;
+padding-top: 10%;
 }
 .formulario {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: 7px 7px 15px rgba(0, 0, 0, 20);
-  border-radius: 10px;
-  padding: 30px;
-}
-.formulario {
-  width: 80%;
+max-width: 600px;
+margin: 0 auto;
+text-align: center;
+box-shadow: 7px 7px 15px rgba(0, 0, 0, 20);
+border-radius: 10px;
+padding: 30px;
+width: 80%;
 }
 .formulario h2 {
-  margin-bottom: 30px;
-  font-size: 2.8rem;
-  color: rgb(0, 0, 0);
+margin-bottom: 30px;
+font-size: 2.8rem;
 }
 .grupo-formulario .title_campos {
-  color: rgb(0, 0, 0);
-  font-size: 1em;
-  font-weight: 500;
+font-size: 1em;
+font-weight: 500;
 }
 .grupo-formulario .campo-escritura {
-  font-size: 1rem;
-}
-.grupo-formulario .label_title {
-  font-size: 1rem;
+font-size: 1rem;
 }
 .label_title::placeholder {
-  color: rgb(3, 3, 3);
-  font-size: 1rem;
+font-size: 1rem;
 }
+.label_title::placeholder {
+color: black;
+}
+.grupo-formulario {
+margin-bottom: 20px;
+color: rgb(121, 6, 58)
+}
+.grupo-formulario label {
+display: block;
+margin-bottom: 5px;
+}
+.label_title {
+background-color: transparent;
+border: 1px solid;
+width: 90%;
+padding: 10px;
+border-radius: 5px;
+box-sizing: border-box;
+font-size: 1.1rem;
+}
+/*Test area */
 textarea::placeholder {
   color: rgb(0, 0, 0);
   font-size: 1rem;
 }
-.grupo-formulario {
-  margin-bottom: 20px;
-  color: rgb(6, 121, 23)
-}
-.grupo-formulario label {
-  display: block;
-  margin-bottom: 5px;
-}
-.label_title {
-  background-color: transparent;
-  color: #d30000;
-  border: 1px solid;
-
-  width: 90%;
-  padding: 10px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 1.1rem;
-}
-.label_title:focus {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); 
-}
-/*Test area */
 .grupo-formulario textarea {
   width: 100%;
   height: 150px;
@@ -77,125 +67,79 @@ textarea::placeholder {
   border: 1px solid;
   border-radius: 5px;
 }
-.botones .boton-cargar-articulo {
-  width: 40%;
-  padding: 15px 0;
-  font-size: 1rem;
-  font-weight: bold;
-  color:rgb(241, 238, 60);
-  border:none;
-  border-radius: 5px;
-  transition: 1s all;
-  cursor:pointer;
-  background-color: #02734A;
+
+.boton-enviar:hover {
+background-color: #2aba49;
+transform: scale(1.1);
+color:rgb(0, 0, 0);
 }
-.boton-cargar-articulo:hover {
-  background-color: #2aba49;
-  transform: scale(1.1);
-  color:rgb(0, 0, 0);
-}
-.boton_eliminar {
-  width: 40%;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color:rgb(179, 178, 130);
-  background-color: #02734A;
-  transition: 1s all;
-  cursor:pointer;
-  text-decoration: none;
-  border-radius: 5px;
+.boton_eliminar, .boton-enviar,
+.ver-articulo-creado {
+width: 40%;
+padding: 10px;
+font-size: 1rem;
+font-weight: bold;
+color:rgb(179, 178, 130);
+background-color: #02734A;
+transition: 1s all;
+cursor:pointer;
+text-decoration: none;
+border-radius: 5px;
 }
 .boton_eliminar:hover {
-  background-color: rgb(158, 5, 5);
-  transform: scale(1.1);
-  color:rgb(9, 5, 5);
-}
-.ver-articulo-creado {
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color:rgb(179, 178, 130);
-  background-color: #02734A;
-  transition: 1s all;
-  cursor:pointer;
-  text-decoration: none;
-  border-radius: 5px;
+background-color: rgb(158, 5, 5);
+transform: scale(1.1);
+color:rgb(9, 5, 5);
 }
 .ver-articulo-creado:hover {
-  background-color: rgb(74, 158, 5);
-  color: black;
-}
-.boton_crear_img {
-  padding: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  color:rgb(20, 13, 13);
-  background: rgb(123, 234, 38);
-  transition: 1s all;
-  cursor:pointer;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.boton_crear_img:hover {
-  background-color: #02734A;
-  color:rgb(179, 178, 130);
+background-color: rgb(74, 158, 5);
+color: black;
 }
 @media screen and (max-width: 1024px) {
-  .sec_princi {
-    padding-top: 30%;
-  }
-  .formulario {
-    width: 90%;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
-  }
-  .formulario h2 {
-    margin-bottom: 20px;
-    font-size: 1.6rem;
-  }
-  .grupo-formulario .title_campos {
-    font-size: 0.8em;
-  }
-  .label_title::placeholder {
-    font-size: 0.9rem;
-  }
-  .grupo-formulario .campo-escritura {
-    font-size: 0.8rem;
-  }
-  .campo-escritura_area::placeholder {
-    font-size: 0.9rem;
-  }
-  .grupo-formulario .campo-escritura_area {
-    font-size: 1.2em;
-  }
-  .botones .boton-cargar-articulo {
-    width: 40%;
-    padding: 8px 0;
-    font-size: 0.8rem;
-    color:rgb(9, 6, 6);
-    background-color: #02734A;
-  }
-  .botones .boton_eliminar {
-    padding: 10px 2;
-    font-size: 0.8rem;
-    color:rgb(9, 6, 6);
-    background: rgb(199, 1, 1);
-  }
-  .botones .ver-articulo-creado {
-    padding: 10px 2;
-    font-size: 0.8rem;
-    color:rgb(9, 6, 6);
-    background-color: #02734A;
-  }
-  .botones .boton_crear_img {
-    padding: 10px 2;
-    font-size: 0.8rem;
-    color:rgb(9, 6, 6);
-    background-color: #39e739;
-  }
-  .grupo-formulario textarea {
-    width: 100%;
-    height: 100px;
-    font-size: 1rem;
-  }
+.contacto {
+  padding-top: 30%;
+}
+.formulario {
+  width: 90%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+}
+.formulario h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+.grupo-formulario .title_campos {
+  font-size: 0.8rem;
+}
+.boton-enviar {
+  color:rgb(9, 6, 6);
+}
+.label_title::placeholder {
+  font-size: 0.9rem;
+}
+.grupo-formulario .campo-escritura {/*letras de selecionar img*/
+  font-size: 0.8rem;
+}
+.botones .boton-enviar,
+.boton_eliminar, .ver-articulo-creado {
+  width: 40%;
+  padding: 10px 2;
+  font-size: 0.8rem;
+  color:rgb(9, 6, 6);
+  background-color: #02734A;
+  border-radius: 5px;
+}
+.botones .boton_eliminar {
+  background: rgb(199, 1, 1);
+}
+.campo-escritura_area::placeholder {
+  font-size: 0.9rem;
+}
+.grupo-formulario .campo-escritura_area {
+  font-size: 1.2em;
+}
+.grupo-formulario textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 1rem;
+}
 }
