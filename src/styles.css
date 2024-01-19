@@ -134,3 +134,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       font-size: 1.1rem;
     }
   }
+  /*Gestion*/
+.contacto-formulario {
+  background-color: #ffffff;
+  padding: 50px 0;
+  padding-top: 10%;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 20);
+  border-radius: 10px;
+  padding: 30px;
+  width: 80%;
+}
+.label_title {
+  background-color: transparent;
+  border: 1px solid;
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  }

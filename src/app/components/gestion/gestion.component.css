@@ -5,20 +5,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 /*formulario nuevo*/
-.contacto {
-background-color: #ffffff;
-padding: 50px 0;
-padding-top: 10%;
-}
-.formulario {
-max-width: 600px;
-margin: 0 auto;
-text-align: center;
-box-shadow: 7px 7px 15px rgba(0, 0, 0, 20);
-border-radius: 10px;
-padding: 30px;
-width: 80%;
-}
+
 .formulario h2 {
 margin-bottom: 30px;
 font-size: 2.8rem;
@@ -43,15 +30,6 @@ color: rgb(121, 6, 58)
 .grupo-formulario label {
 display: block;
 margin-bottom: 5px;
-}
-.label_title {
-background-color: transparent;
-border: 1px solid;
-width: 90%;
-padding: 10px;
-border-radius: 5px;
-box-sizing: border-box;
-font-size: 1.1rem;
 }
 .boton-enviar:hover {
 background-color: #2aba49;
@@ -81,7 +59,7 @@ background-color: rgb(74, 158, 5);
 color: black;
 }
 @media screen and (max-width: 1024px) {
-.contacto {
+.contacto-formulario {
   padding-top: 30%;
 }
 .formulario {
