@@ -32,7 +32,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { HorarioComponent } from './components/horario/horario.component';
+//import { HorarioComponent } from './components/horario/horario.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -60,7 +60,7 @@ import { InterceptorService } from './services/interceptor.service';
     HomeComponent,
     //NuestroPastorComponent,
     FundamentosComponent,
-    HorarioComponent,
+    //HorarioComponent,
     GestionunoComponent,
     FooterComponent,
     ShowModalComponent,

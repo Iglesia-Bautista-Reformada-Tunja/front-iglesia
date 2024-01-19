@@ -24,14 +24,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  /*abrirModal(descripcion: string): void {
-    const dialogRef: MatDialogRef<DescripcionModalComponent> = this.dialog.open(DescripcionModalComponent, {
-      width: '500px',
-      data: { descripcion: descripcion }
-    });
-
-    dialogRef.afterClosed().subscribe(() => {
-      // Código a ejecutar después de cerrar el modal (si es necesario)
-    });
-  }*/
+  openWhatsApp() {
+    const whatsappURL = 'https://wa.me/573112089172';
+    window.open(whatsappURL, '_blank');
+  }
 }

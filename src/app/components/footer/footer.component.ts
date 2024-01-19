@@ -12,4 +12,9 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openWhatsApp() {
+    const whatsappURL = 'https://wa.me/573112089172';
+    window.open(whatsappURL, '_blank');
+  }
+
 }
