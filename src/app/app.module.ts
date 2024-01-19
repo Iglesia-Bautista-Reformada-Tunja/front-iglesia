@@ -12,7 +12,7 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FundamentosComponent } from './components/fundamentos/fundamentos.component';
-import { NuestroPastorComponent } from './components/nuestro-pastor/nuestro-pastor.component';
+//import { NuestroPastorComponent } from './components/nuestro-pastor/nuestro-pastor.component';
 import { GestionunoComponent } from './components/gestionuno/gestionuno.component';
 import { AuthGuard } from './guard/auth.guard';
 
@@ -58,7 +58,7 @@ import { InterceptorService } from './services/interceptor.service';
     GestionComponent,
     NosotrosComponent,
     HomeComponent,
-    NuestroPastorComponent,
+    //NuestroPastorComponent,
     FundamentosComponent,
     HorarioComponent,
     GestionunoComponent,
