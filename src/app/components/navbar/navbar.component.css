@@ -3,7 +3,7 @@
   display: flex;
 }
 header {
-  height: 10.5vh;
+  height: 14.5vh;
   background-color: #02734A;
   top: 0;
   position: fixed;
@@ -125,7 +125,7 @@ header button {
     font-size: 1.1rem;
   }
   .navMenu-list.active {
-    margin-top: 87px;
+    margin-top: 110px;
   }
   .logo img {
     width: 250px;
