@@ -1,5 +1,4 @@
 export interface FileReceive {
-    //inmuebles : inmuebleObject[]
 }
 
 

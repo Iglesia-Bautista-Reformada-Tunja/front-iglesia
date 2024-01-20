@@ -1,9 +1,7 @@
 /*CSS GENERAL*/
-
 .flexSB {
   display: flex;
 }
-
 header {
   height: 10.5vh;
   background-color: #02734A;
@@ -14,7 +12,6 @@ header {
   display: flex;
   align-items: center;
 }
-
 .logo {
   flex: 5;
   display: flex;
@@ -22,7 +19,6 @@ header {
   height: 80px;
   margin-left: 2%;
 }
-
 li a.active, li a:hover{
   background: rgb(25, 50, 27);
   color: #21f12b;
@@ -30,31 +26,26 @@ li a.active, li a:hover{
   padding: 2px 7px;
   border-radius: 5px;
 }
-
 .logo img {
   width: 260px;
   margin-top: 5px;
 }
-
 nav ul {
   display: flex;
   margin-top: 35px;
   margin-left: 10%;
   list-style-type: none;
 }
-
 header ul li {
   margin-top: 0;
   margin-right: 10px;
   white-space: nowrap; 
 }
-
 /* REVISAR*/
 li .ul-second {
   position: absolute;
   display: none;
 }
-
 header a {
   color: #fcfcfc;
   margin-left: 15px;
@@ -64,7 +55,6 @@ header a {
   font-weight: 500;
   transition: none;
 }
-
 header i {
   width: 40px;
   height: 40px;
@@ -74,28 +64,23 @@ header i {
   border: 2px solid #ffffff;
   margin: 0 10px;
 }
-
 header button {
   border-radius: 10px;
   font-size: 15px;
   font-weight: bold;
 }
-
 .toggle {
   display: none;
 }
-
 @media only screen and (min-width: 1024px) {
   .toggle {
     display: none;
   }
-
   .navMenu-list {
     display: flex !important;
     position: static !important;
   }
 }
-
 @media only screen and (max-width: 1024px) {
   header nav .flexSB {
     display: none;
@@ -134,7 +119,6 @@ header button {
   }
   nav ul {
     margin-left: 0px;
-  
   }
   header a {
     margin-left: 2px;
@@ -148,7 +132,6 @@ header button {
     margin-left: -30%;
   }
   .logo {
-  margin-left: 20%;
-
+    margin-left: 20%;
   }
 }

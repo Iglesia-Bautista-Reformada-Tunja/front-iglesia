@@ -12,24 +12,17 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class EliminarHistoriaComponent implements OnInit {
   form!: FormGroup;
-
   file: any = {
     imageRutas: '',
     name_foto: ''
   }
-
   files: Files[] = [];
-  //filesMostrar: any[] = [];
-
   allFiles: any;
-
-
   constructor(
     private fileService: FileService,
     private dialog:MatDialog,
     private _snackBar: MatSnackBar
-    ) { } //suscripcion al servicio
-
+    ) { }
   ngOnInit(): void {
     this.fileService.getFile();
     this.fileService.getFilesStream().subscribe((files: Files[])=>{
@@ -37,10 +30,8 @@ export class EliminarHistoriaComponent implements OnInit {
       console.log(this.files);
     });
   }
-
   deleteHistoria(file: any) {
     console.log(this.file);
-
     this.fileService.deleteHistoria(file.name_foto).subscribe(()=>{
     this.allFiles = this.allFiles.filter((item: any) => item.name_foto !== file.nameBook);
     })
@@ -50,14 +41,4 @@ export class EliminarHistoriaComponent implements OnInit {
       verticalPosition: 'bottom'
     })
   }
-
 }
-
-/*
-
-export interface Files {
-    _id: string;
-    name_foto: string;
-    imageRutas: string[];
-}
-*/

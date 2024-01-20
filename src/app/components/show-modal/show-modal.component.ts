@@ -16,8 +16,5 @@ export class ShowModalComponent implements OnInit {
   cerrarModal(): void {
     this.dialogRef.close();
   }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

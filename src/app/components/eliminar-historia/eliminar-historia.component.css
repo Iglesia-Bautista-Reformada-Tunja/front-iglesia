@@ -2,19 +2,16 @@
     font-size: 2rem;
     color: rgb(45, 87, 62);
 }
-
 .container{
     max-width: 60%;
     padding-top: 10%;
 }
-
 .card {
     margin-right: 30px;
     margin-bottom: 30px;
     padding: 5px;
     padding-right: 5px;
 }
-
 .imagen {
     border-radius: 5px;
     height: 150px;
@@ -23,21 +20,17 @@
 .title-nameBook {
     font-size: 1.1rem;
 }
-
 .title-nameBook::first-letter {
     text-transform: uppercase;
 }
-
 .parrafo-article {
     color: #b12727;
     font-family: 'Nombre-de-tu-fuente', sans-serif;
     font-size: 1.1rem;
     line-height: 1.5;
-}
-
-  
-  /*========MEDIA QUERIES (SMALL DEVICES)========*/
-  @media screen and (max-width: 600px) {
+} 
+/*========MEDIA QUERIES (SMALL DEVICES)========*/
+@media screen and (max-width: 600px) {
     .titulo-articulos-recomendados {
         font-size: 1.1rem;
         color: rgb(15, 83, 229);
@@ -50,4 +43,4 @@
         font-family: sans-serif;
         font-size: 0.9rem;
     }
-  }
+}

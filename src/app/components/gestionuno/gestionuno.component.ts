@@ -13,24 +13,19 @@ export class GestionunoComponent implements OnInit {
 
   allLibros: any;
   libros: Libros[] = [];
-
-
   getAllLibros(){
     this.libroService.getAllLibros().subscribe((libros: Libros[])=>{
       this.allLibros = libros
     }) 
     
   }
-
   pdf!:FormGroup;
   libro!: Libros;
   images!: FileList;
   articulo!:FormGroup;
-  
   constructor(
     private libroService: LibroService,
     private _snackBar: MatSnackBar) {}
-
   ngOnInit(): void {
     this.pdf = new FormGroup({ 
       nameBook: new FormControl(null),
@@ -38,15 +33,10 @@ export class GestionunoComponent implements OnInit {
       images: new FormControl(null)
     })
   }
- 
-
-
   onChangeInput(event: Event){
     this.images = (event.target as HTMLInputElement).files as FileList 
 
-  }
-
-  
+  } 
   createLibro(){
     this.libroService.postLibro(this.pdf.value.nameBook, this.pdf.value.article, this.images);
     this.pdf.reset();

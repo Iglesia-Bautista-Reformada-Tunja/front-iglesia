@@ -11,11 +11,8 @@ import { FileService } from 'src/app/services/file.service';
 })
 export class NosotrosComponent implements OnInit {
   form!: FormGroup;
-
   nosotros = ['Que creemos', 'Nuestra historia', 'Contactanos'];
-
   files: Files[] = []; //llamar interfarces del model
-
   constructor(private fileService: FileService,
               private fb: FormBuilder,) {
                 this.form = this.fb.group({
@@ -23,15 +20,11 @@ export class NosotrosComponent implements OnInit {
   
                 })
   }
-
   ngOnInit(): void {
     this.fileService.getFile();
     this.fileService.getFilesStream().subscribe((files: Files[])=>{
       this.files = files;
-      //console.log(this.files);
     });
   }
-
   pdfUrl: string = 'assets/Confesion1689.pdf'
-
 }

@@ -9,20 +9,12 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   datosLogin = {
     usuario: "",
     password: ""
   }
-
   constructor(private authService: AuthService, private routerService: Router, private toastr: ToastrService) { }
-
-
-
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
   login() {
     console.log(this.datosLogin)
     this.authService.loginUser(this.datosLogin).subscribe((res) => {
@@ -34,7 +26,4 @@ export class LoginComponent implements OnInit {
       }
     })
   }
-
 }
-
-//[formGroup]="miFormulario" (ngSubmit)="submitForm()"

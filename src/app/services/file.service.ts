@@ -16,32 +16,26 @@ export class FileService {
   files$ = new Subject<Files[]>();
 
   constructor(private http: HttpClient) { }
-
-
   deleteHistoria(name_foto: string) {
     const deleteUrl = `${this.url}name_foto/${name_foto}`;
     return this.http.delete(deleteUrl)
   }
-
   getFile(){
     this.http.get<Files[]>(this.url).subscribe((data)=>{
       this.imagenes = data;
       this.files$.next(this.imagenes);
     })
   }
-
   getFilesStream(){
     return this.files$.asObservable()
   }
-
-  postFile(name_foto: string, images: FileList){     //metodo para grabar en postman y envbia al backend
-    const file = new FormData();      //objeto que nos enlista los artibutos a la base datos
-    file.append("name_foto", name_foto);      //metodo ´para adjuntar archivos append
+  postFile(name_foto: string, images: FileList){
+    const file = new FormData();
+    file.append("name_foto", name_foto);
     for(let i=0; i<images.length; i++){
       console.log(images[i])
-      file.append("images",images[i]);     //con el for podemos enviar imagen por imagen
+      file.append("images",images[i]);
     }
-
     this.http.post<Files>(this.url+"multiple", file).subscribe((response: Files)=>{
       const file: Files = {
         _id:response._id,
@@ -49,8 +43,7 @@ export class FileService {
         imageRutas:response.imageRutas
       }
       this.imagenes.push(file);
-      this.files$.next(this.imagenes);    //actualiza la vista 
+      this.files$.next(this.imagenes);
     })
   }
-
 }
