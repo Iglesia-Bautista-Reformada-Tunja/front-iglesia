@@ -5,7 +5,7 @@ body, html {
 }
 .horario {
   padding-top: 2.5rem;
-  margin-top: 60px;
+  margin-top: 90px;
 }
 .horario__image-container {
   position: relative;
@@ -29,11 +29,6 @@ body, html {
   color: aliceblue;
 }
 /* imagen de fondo*/
-.img-fondo{
-  height: 250px;
-  width: 100%;
-  opacity: 2;
-}
 .subtitulo1 {
   font-family: 'Edu TAS Beginner', cursive;
   font-size: 1.7rem;
@@ -50,11 +45,20 @@ body, html {
   text-align: justify;
 }
 @media (max-width: 1024px) {
+  .text-center {
+    font-size: 1rem;
+  }
+  .horario {
+    width: 100%;
+  }
   .subtitulo1 {
       font-size: 1.2rem;
   }
   .descripcion {
       font-size: 0.9rem;
+  }
+  .horario__content p {
+    font-size: 0.7rem;
   }
 }
 .institucional {
@@ -76,7 +80,7 @@ body, html {
 }
 @media (max-width: 1024px) {
   .titulo {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 .descripcion__pastor {
@@ -108,10 +112,10 @@ body, html {
 }
 @media (max-width: 1024px) {
   .card_confesion {
-      width: 100%;
+    width: 100%;
   }
   .card_ibrt {
-      width: 100%;
+    width: 100%;
   }
 }
 /*NUESTRA HISTORIA*/
