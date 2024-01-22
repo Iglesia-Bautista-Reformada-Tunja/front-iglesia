@@ -1,17 +1,17 @@
 <div class="body">
   <div class="login"> 
     <div>
-        <form (submit)="login()">
-          <img class="logo" src="../../../assets/img/4qxzTl-LogoMakr.png" alt="">
+        <form (submit)="login()" #loginForm="ngForm">
+          <img class="logo" src="../../../assets/img/4qxzTl-LogoMakr.png" alt="Logo iglesia">
           <div>
             <label for="user" class="form-label">Usuario</label>
-            <input type="email" class="form-contro" id="email" name="email" [(ngModel)]="datosLogin.usuario">
+            <input type="email" class="form-contro" id="email" name="email" [(ngModel)]="datosLogin.usuario" required="Requerido">
           </div>
           <div>
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-contro" id="password" name="password" [(ngModel)]="datosLogin.password">
+            <input type="password" class="form-contro" id="password" name="password" [(ngModel)]="datosLogin.password" required="Requerido">
           </div>
-          <button class="button_ingresar" type="submit">Ingresar</button>
+          <button class="button_ingresar" type="submit" [disabled]="!loginForm.valid">Ingresar</button>
         </form>
     </div>
   </div>
