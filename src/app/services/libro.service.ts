@@ -10,20 +10,20 @@ import { Libros } from '../models/libros';
 })
 export class LibroService {
 
-//readonly url = "https://back-iglesia-3c289a779c5b.herokuapp.com/libros"
-  readonly url = "https://localhost:2500/api/libros/";
+readonly url = "https://front-iglesia-3aa8ff13a59e.herokuapp.com/libros"
+  //readonly url = "https://localhost:2500/api/libros/";
   imagenes: Libros[] = [];
   libros$ = new Subject<Libros[]>();
   httpClient: any;
 
   constructor(private http: HttpClient) {}
   getAllLibros(){
-    //return this.httpClient.get("https://back-iglesia-3c289a779c5b.herokuapp.com/libros")
-    return this.httpClient.get("https://localhost:2500/api/libros/")
+    return this.httpClient.get("https://front-iglesia-3aa8ff13a59e.herokuapp.com/libros")
+    //return this.httpClient.get("https://localhost:2500/api/libros/")
   }
   paginationLibros(){
-    //return this.http.get("https://back-iglesia-3c289a779c5b.herokuapp.com/pagination")
-    return this.http.get("https://localhost:2500/api/pagination")
+    return this.http.get("https://front-iglesia-3aa8ff13a59e.herokuapp.com/pagination")
+    //return this.http.get("https://localhost:2500/api/pagination")
   }
   //https://back-iglesia-3c289a779c5b.herokuapp.com
   deleteArticulo(nameBook: string) {

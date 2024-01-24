@@ -11,7 +11,9 @@ export class FileService {
   //https://back-iglesia-3c289a779c5b.herokuapp.com
 
   //readonly url = "https://back-iglesia-3c289a779c5b.herokuapp.com/";
-  readonly url = "https://localhost:2500/api/images/";
+  readonly url = "https://front-iglesia-3aa8ff13a59e.herokuapp.com";
+  
+  //readonly url = "https://localhost:2500/api/images/";
   imagenes: Files[] = [];
   files$ = new Subject<Files[]>();
 
