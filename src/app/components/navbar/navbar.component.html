@@ -9,17 +9,23 @@
           <a routerLink="/home" [ngClass]="{ 'active': location === '/home' }">Inicio</a>
         </li>
         <li>
-          <a routerLink="/login" [ngClass]="{ 'active': location === '/gestionUno' }">Gestion</a>
+          <a routerLink="gestionUno" *ngIf="authService.isLoggedIn()" [ngClass]="{ 'active': location === '/gestionUno' }" (click)="changeNavbarColor(true)">Gestion</a>
         </li>
-     
         <li>
           <a routerLink="/nosotros" [ngClass]="{ 'active': location === '/nosotros' }">Nosotros</a>
         </li>
         <li>
           <a routerLink="/fundamentos" [ngClass]="{ 'active': location === '/fundamentos' }">Artículos</a>
         </li>
-        <li>
-          <a routerLink="/login" [ngClass]="{ 'active': location === '/login' }">Login</a>
+        <li *ngIf="!authService.isLoggedIn()">
+          <a routerLink="/login" [ngClass]="{ 'active': location === '/login' }">
+            Login
+          </a>
+        </li>
+        <li *ngIf="authService.isLoggedIn()">
+          <a class="logout" (click)="authService.logoutUser()">
+            Logout
+          </a>
         </li>
       </ul>
       <button class="toggle" (click)="toggleMobile()">

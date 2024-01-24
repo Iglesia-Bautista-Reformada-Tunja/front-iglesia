@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private routerService: Router, private toastr: ToastrService) { }
   ngOnInit(): void {}
   login() {
-    console.log(this.datosLogin)
     this.authService.loginUser(this.datosLogin).subscribe((res) => {
       if ((res as any).token) {
         localStorage.setItem('token', (res as any).token)

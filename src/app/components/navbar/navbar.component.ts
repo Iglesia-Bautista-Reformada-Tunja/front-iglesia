@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+  changeNavbarColor(bandera: boolean): void{
+    //bandera? this.navbarColor = "navbar-light bg-light": this.navbarColor = "navbar-dark bg-dark";
+  }
   toggleMobile(): void {
     this.Mobile = !this.Mobile;
   }
