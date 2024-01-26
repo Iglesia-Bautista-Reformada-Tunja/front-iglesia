@@ -9,9 +9,6 @@
           <a routerLink="/home" [ngClass]="{ 'active': location === '/home' }">Inicio</a>
         </li>
         <li>
-          <a routerLink="gestionUno" *ngIf="authService.isLoggedIn()" [ngClass]="{ 'active': location === '/gestionUno' }" (click)="changeNavbarColor(true)">Gestion</a>
-        </li>
-        <li>
           <a routerLink="/nosotros" [ngClass]="{ 'active': location === '/nosotros' }">Nosotros</a>
         </li>
         <li>
@@ -26,6 +23,9 @@
           <a class="logout" (click)="authService.logoutUser()">
             Logout
           </a>
+        </li>
+        <li>
+          <a routerLink="gestionUno" *ngIf="authService.isLoggedIn()" [ngClass]="{ 'active': location === '/gestionUno' }" (click)="changeNavbarColor(true)">Gestion</a>
         </li>
       </ul>
       <button class="toggle" (click)="toggleMobile()">
